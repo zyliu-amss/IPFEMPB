@@ -1,0 +1,19 @@
+#BSUB -J ADP
+#BSUB -n 144
+#BSUB -q batch
+#BSUB -R "span[ptile=18]"
+#BSUB -I
+
+module purge
+module load mpi/oneapimpi-oneapi-2021.1.1
+module load apps/mkl-oneapi-2021 
+
+mpirun ./PBE \
+	-level 8 \
+	-fn_mesh mesh/1v4z_box46_iso2.mesh \
+	-fn_pqr pqr/1v4z-center.pqr \
+	-fn_vtk 1v4z_1.vtk \
+	-dof_type P1 \
+	-C_b 0.05
+	-options_file advanced.options
+

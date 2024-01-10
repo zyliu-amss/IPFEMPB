@@ -1,0 +1,6 @@
+-PB_type NPBE
+-box_length 4
+-refine0 6 #6 9 12 15 18 21
+-xfem_ctol 0.1
+-dof_type P1 #P1 P2
+-use_aly

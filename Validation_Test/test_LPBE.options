@@ -1,0 +1,10 @@
+-epsilon_solute 2.0 
+-epsilon_solvent 80.0 
+-concentration 0.10 #0.05 0.10 0.15
+-temp 298.15 
+-PB_type LPBE
+-box_length 4 
+-refine0 6 #6 9 12 15 18 21
+-xfem_ctol 0.1
+-dof_type P1 #P1 P2
+-use_aly

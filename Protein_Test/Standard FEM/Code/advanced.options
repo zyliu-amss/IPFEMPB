@@ -1,0 +1,11 @@
+-level 0 
+-dof_type P1
+
+-solver gmres
+-gmres_type flgmres_r  #gmres_r gmres_l fgmres_r lgmres_r lgmres_l flgmres_r
+-gmres_pc_type solver  #none jacobi bjacobi solver
+-gmres_pc_opts "{-solver asm -asm_overlap 7}"
+-lgmres_augk 7
+
+
+
